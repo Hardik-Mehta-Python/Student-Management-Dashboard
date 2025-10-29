@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css">
+
 </head>
-<body>
-    <h1>hello</h1>
+
+<body class="font">
+    <header class="h-[72px]  w-full flex justify-between">
+        <aside class="w-[20%]  h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
+            Logo
+        </aside>
+        <nav class="w-[50%]  h-full">
+            <ul class="flex justify-evenly items-center h-full w-full text-[#380361] text-[20px]">
+                <!-- <li><a href="" class="font-bold">HOME</a> <div class=""></div></li> -->
+                <li class="group relative">
+                    <a href="index.html" class="font-bold">HOME</a>
+                    <div
+                        class="  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
+                    </div>
+                </li>
+                <li class="group relative">
+                    <a href="./src/contactus.html" >CONTACT US</a>
+                    <div
+                        class="  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
+                    </div>
+                </li>
+
+                
+                <li><a href="./src/auth/login.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">LOG IN</a></li>
+
+                <li><a href="./src/auth/register.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">REGISTER</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
+
 </html>
