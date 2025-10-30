@@ -1,12 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #courses {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+    </style>
+
 </head>
-<body>
-    <h1>REGISTER</h1>
+
+<body class="font">
+    <header class="h-[72px]  w-full flex justify-between mb-8 shadow">
+        <aside class="w-[20%]  h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
+            Logo
+        </aside>
+
+
+        <nav class="w-[50%]  h-full">
+
+            <ul class="flex justify-evenly items-center h-full w-full text-[#380361] text-[20px]">
+
+                <li class="group relative active">
+                    <a href="/index.html" class="font-bold">HOME</a>
+                    <div
+                        class=" group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 group-hover:h-0.5 transition-transform duration-500 origin-center">
+                    </div>
+                </li>
+                <li class="group relative ">
+                    <a href="../contactus.html">CONTACT US</a>
+                    <div
+                        class="group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
+                    </div>
+                </li>
+
+
+                <li><a href="./login.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">LOG
+                        IN</a></li>
+
+                <li><a href="./register.html"
+                        class="border px-6 py-2 rounded-full bg-[#380361] text-white">REGISTER</a></li>
+            </ul>
+
+
+        </nav>
+    </header>
+    <!-- <section class=" flex w-full justify-evenly items-center ">
+        <input type="text" placeholder="🔎︎ Search By Name and Id"
+            class="placeholder:text-[#380361] focus:border-[#380361] focus:outline-none text-[#380361] w-[20%] border py-1.5 px-4 rounded-full border-[#380361]">
+
+        <select name="courses" id="courses"
+            class="border px-4 py-1 rounded-full bg-[#380361] text-white text-lg text-center ">
+            <option value="" selected disabled>Filter By Course</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="Manual Testing">Manual Testing</option>
+            <option value="Automation Testing">Automation Testing</option>
+        </select>
+
+        <div class="border flex items-center px-4 py-2 rounded-full bg-[#380361] text-white">
+            <a href="./src/add.html" class="flex items-center gap-2">
+                Add Students
+                <span
+                    class="flex justify-center items-center h-6 w-6 rounded-full bg-[#380361] text-white border border-white">
+                    <i class="fa-solid fa-plus text-sm"></i>
+                </span>
+            </a>
+        </div>
+
+
+
+
+
+    </section> -->
+<section class="m-100">
+
+</section>
+
+    <footer class="p-10 w-full flex flex-col gap-4  bg-[#380361] text-white">
+        <div class="bg-[#380361] text-white flex w-full justify-between  items-center mb-20">
+            <div class="  flex flex-col gap-5 w-[30%] ml-10 ">
+                <h1 class="   text-[40px] flex justify-start items-center  text-white font-medium">Logo</h1>
+                <p class="text-[20px]">Stay in the loop and signup for the Wardiere newslwtter</p>
+                <form class="py-2 px-4 border rounded-full bg-white flex justify-between">
+                    <input type="text" placeholder="Enter your email"
+                        class="placeholder:text-[#ADACB8] placeholder:text-lg text-[#ADACB8] text-lg focus:outline-none w-[80%]">
+                    <span
+                        class="text-white h-10 w-10 rounded-full flex justify-center items-center bg-[#380361]"><button
+                            type="submit"><i class="fa-solid fa-arrow-right"></i></button></span>
+                </form>
+            </div>
+            <div class="flex justify-evenly   w-[50%]">
+                <div class="flex flex-col gap-4">
+                    <h1 class="font-medium">
+                        Company
+                    </h1>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Solutions</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Team</a></li>
+                        <li><a href="">Career</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h1 class="font-medium">
+                        Documentation
+                    </h1>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="">Help Centre</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h1 class="font-medium">
+                        Social
+                    </h1>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Youtube</a></li>
+                        <li><a href="">Twitter</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="border border-[#ADACB8]  mx-8 "></div>
+            
+        </div>
+        <div class="px-[28px] flex w-full justify-between">
+            <p class="">&copy; Logo All Rights Reserved 2025</p>
+            <p>
+                Terms & Condition
+            </p>
+            <aside class="flex gap-3">
+                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]"><i class="fa-brands fa-instagram"></i></div>
+                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]"><i class="fa-brands fa-youtube"></i></div>
+                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]"><i class="fa-brands fa-x-twitter"></i></div>
+                
+                
+            </aside>
+        </div>
+    </footer>
+
+
+
+
 </body>
+
 </html>
