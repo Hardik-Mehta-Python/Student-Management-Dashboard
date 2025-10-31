@@ -20,8 +20,8 @@
 </head>
 
 <body class="font">
-    <div class="flex">
-        <section class="w-[60%]">
+    <div class="flex h-screen">
+        <section class="w-[60%] h-screen flex flex-col gap-[100px]">
             <header class="h-[72px]  w-full flex justify-between mb-8 shadow">
                 <aside
                     class="w-[20%]  h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
@@ -68,12 +68,32 @@
 
                 </nav>
             </header>
+            <form class="w-full flex flex-col items-center justify-center gap-4">
+                <h1 class="text-6xl font-semibold text-[#380361] mb-10">Log in</h1>
+                <input type="text" placeholder="👤  Username" required
+                    class="w-[45%] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#380361] bg-[#E7E7E7]" />
+                <input type="password" placeholder="🔒 Password" required
+                    class="w-[45%] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#380361] bg-[#E7E7E7]" />
+                <div class="flex justify-between w-[45%] gap-2 mb-8">
+                    <div>
+                        <input type="checkbox" class="accent-red-600" />
+                        <label for="" class="text-[#8F8F8F]">Remember Me</label>
+                    </div>
+                    <a href="" class="hover:underline hover:text-indigo-500 text-[#8F8F8F]">Forgot Password?</a>
+                </div>
+                <button type="submit"
+                    class="w-[45%] px-20 py-2 rounded-full bg-[#380361] font-semibold cursor-pointer text-white">
+                    Login
+                </button>
+                <h4 class="text-[#380361]">or Sign up</h4>
+            </form>
 
         </section>
-        <div class="w-[40%] h-full bg-linear-to-r from-[#5E00A0] via-[#4A0086] to-[#530086] ">
+
+        <div class="w-[40%] h-full bg-linear-to-r from-[#5E00A0] via-[#4A0086] to-[#530086] border ">
 
             <img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F3tM2S0dDYKXRrrkafV-b1kyKbJIxrXQAUh6_SUVwTOE.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMT4L79gScdCo3Z_4tfnctMLAojDbyklkD1F9RALCW2U&exp=1761859351&signer=media-rpc&token=AAIAAU0ALzN0TTJTMGREWUtYUnJya2FmVi1iMWt5S2JKSXhyWFFBVWg2X1NVVndUT0UuanBnAAAAAAGaNwAx2Fntu6BLC2cKuxWGn4i_O4u0b1BoPD2iorItEWWUDNnk"
-                alt="" class="h-full">
+                alt="" class="h-full w-full object-fill">
 
         </div>
     </div>
@@ -84,3 +104,4 @@
 </body>
 
 </html>
+<!-- class="h-full flex flex-col items-center justify-center gap-4 " -->
