@@ -1,0 +1,8 @@
+usename = "userny
+ame"
+password = "password"
+full name = "fullName"
+email = email
+confirm pass = confirmPassword
+
+
