@@ -21,80 +21,107 @@
 
 <body class="font">
     <div class="flex h-screen">
-        <section class="w-[60%] h-screen flex flex-col gap-[100px]">
-            <header class="h-[72px]  w-full flex justify-between mb-8 shadow">
-                <aside
-                    class="w-[20%]  h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
-                    Logo
-                </aside>
 
-                <nav class="w-[50%]  h-full">
+        <section class="w-[60%] h-screen flex flex-col justify-center items-center relative">
 
-                    <ul class="flex justify-evenly items-center h-full w-full text-[#380361] text-[20px]">
+            <header
+                class="h-[72px] w-full flex justify-between items-center px-10 shadow absolute top-0 left-0 bg-white">
+                <aside class="text-[32px] text-[#380361] font-semibold">Logo</aside>
 
-                        <li class="group relative ">
-                            <a href="/index.html" class="">HOME</a>
+                <nav class="text-[#380361] text-[18px]">
+                    <ul class="flex gap-10 items-center">
+                        <li class="group relative">
+                            <a href="/index.html">HOME</a>
                             <div
-                                class=" group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 group-hover:h-0.5 transition-transform duration-500 origin-center">
+                                class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
                             </div>
                         </li>
-                        <li class="group relative ">
+
+                        <li class="group relative">
                             <a href="../contactus.html">CONTACT US</a>
                             <div
-                                class="group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
+                                class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
                             </div>
                         </li>
 
                         <li class="px-6 py-2 rounded-full bg-[#380361] text-white flex gap-4">
-                            <div class="group relative ">
-                                <a href="./login.html" class=" ">LOGIN</a>
+                            <div class="group relative">
+                                <a href="./login.html">LOGIN</a>
                                 <div
                                     class="group-[.active]:scale-x-100 h-0.5 w-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
                                 </div>
                             </div>
                             <div class="group relative active">
-                                <a href="./register.html" class=" font-bold">REGISTER</a>
+                                <a href="./register.html" class="font-bold">REGISTER</a>
                                 <div
                                     class="group-[.active]:scale-x-100 h-0.5 w-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
                                 </div>
                             </div>
                         </li>
-
-                        <li>
-                        </li>
                     </ul>
-
-
-
                 </nav>
             </header>
-            <!-- <form class="w-full flex flex-col items-center justify-center gap-4">
-                <h1 class="text-6xl font-semibold text-[#380361] mb-10">Log in</h1>
-                <input type="text" placeholder="👤  Username" required
-                    class="w-[45%] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#380361] bg-[#E7E7E7]" />
-                <input type="password" placeholder="🔒 Password" required
-                    class="w-[45%] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#380361] bg-[#E7E7E7]" />
-                <div class="flex justify-between w-[45%] gap-2 mb-8">
-                    <div>
-                        <input type="checkbox" class="accent-red-600" />
-                        <label for="" class="text-[#8F8F8F]">Remember Me</label>
-                    </div>
-                    <a href="" class="hover:underline hover:text-indigo-500 text-[#8F8F8F]">Forgot Password?</a>
-                </div>
-                <button type="submit"
-                    class="w-[45%] px-20 py-2 rounded-full bg-[#380361] font-semibold cursor-pointer text-white">
-                    Login
-                </button>
-                <h4 class="text-[#380361]">or Sign up</h4>
-            </form> -->
 
+
+            <div class="flex flex-col justify-center items-center gap-8 mt-20">
+
+                <h1 class="text-4xl font-semibold text-[#380361] w-[450px] text-left">Sign up</h1>
+
+                <form action="" class="flex flex-col justify-center items-center gap-4">
+
+                    <div class="flex flex-col justify-center items-start gap-1">
+                        <label>Username</label>
+                        <input type="text" placeholder="Username" required name="username"
+                            class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
+                    </div>
+
+
+                    <div class="flex flex-col justify-center items-start gap-1">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Full Name" required name="fullName"
+                            class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
+                    </div>
+
+
+                    <div class="flex flex-col justify-center items-start gap-1">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="abc123@gmail.com" required name="email"
+                            class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
+                    </div>
+
+
+                    <div class="flex items-center justify-between gap-11">
+                        <div class="flex flex-col justify-center items-start gap-1">
+                            <label>Password</label>
+                            <input type="password" placeholder="********" required name="password"
+                                class="w-[200px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
+                        </div>
+
+                        <div class="flex flex-col justify-center items-start gap-1">
+                            <label>Confirm Password</label>
+                            <input type="password" placeholder="********" required name="confirmPassword"
+                                class="w-[200px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
+                        </div>
+                    </div>
+
+
+                    <button
+                        class="w-[450px] px-20 py-2 rounded-full bg-[#380361] font-semibold cursor-pointer text-white mt-4 hover:opacity-90 transition-all">
+                        Create Account
+                    </button>
+
+
+                    <h4 class="text-[#380361] cursor-pointer">
+                        <a href="./login.html">or Log in</a>
+                    </h4>
+                </form>
+            </div>
         </section>
 
-        <div class="w-[40%] h-full bg-linear-to-r from-[#5E00A0] via-[#4A0086] to-[#530086] border ">
 
+        <div class="w-[40%] h-full bg-gradient-to-r from-[#5E00A0] via-[#4A0086] to-[#530086]">
             <img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F3tM2S0dDYKXRrrkafV-b1kyKbJIxrXQAUh6_SUVwTOE.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMT4L79gScdCo3Z_4tfnctMLAojDbyklkD1F9RALCW2U&exp=1761859351&signer=media-rpc&token=AAIAAU0ALzN0TTJTMGREWUtYUnJya2FmVi1iMWt5S2JKSXhyWFFBVWg2X1NVVndUT0UuanBnAAAAAAGaNwAx2Fntu6BLC2cKuxWGn4i_O4u0b1BoPD2iorItEWWUDNnk"
-                alt="" class="h-full w-full object-fill">
-
+                alt="Registration image" class="h-full w-full object-cover">
         </div>
     </div>
 
