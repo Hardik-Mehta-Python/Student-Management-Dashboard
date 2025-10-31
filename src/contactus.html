@@ -55,37 +55,89 @@
 
         </nav>
     </header>
-    <section class=" flex w-full justify-evenly items-center ">
-        <input type="text" placeholder="🔎︎ Search By Name and Id"
-            class="placeholder:text-[#380361] focus:border-[#380361] focus:outline-none text-[#380361] w-[20%] border py-1.5 px-4 rounded-full border-[#380361]">
 
-        <select name="courses" id="courses"
-            class="border px-4 py-1 rounded-full bg-[#380361] text-white text-lg text-center ">
-            <option value="" selected disabled>Filter By Course</option>
-            <option value="Python">Python</option>
-            <option value="Java">Java</option>
-            <option value="Manual Testing">Manual Testing</option>
-            <option value="Automation Testing">Automation Testing</option>
-        </select>
+    <section
+        class="mt-14 w-[85%] mx-auto bg-[#380361] p-12 rounded-3xl text-white shadow-2xl flex justify-between items-start gap-12 m-auto mb-16">
 
-        <div class="border flex items-center px-4 py-2 rounded-full bg-[#380361] text-white">
-            <a href="./add.html" class="flex items-center gap-2">
-                Add Students
-                <span
-                    class="flex justify-center items-center h-6 w-6 rounded-full bg-[#380361] text-white border border-white">
-                    <i class="fa-solid fa-plus text-sm"></i>
-                </span>
-            </a>
+        <div class="w-1/2">
+            <h2 class="text-3xl font-semibold mb-6">Fill the form</h2>
+
+            <div class="flex gap-4 mb-4">
+                <input type="text" placeholder="First Name" name="firstName"
+                    class="w-1/2 py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none" />
+                <input type="text" placeholder="Last Name" name="lastName"
+                    class="w-1/2 py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none" />
+            </div>
+
+            <input type="email" placeholder="Email Address" name="email"
+                class="w-full py-3 px-4 rounded-lg mb-4 text-[#380361] bg-[#FAFAFF] focus:outline-none" />
+
+            <textarea placeholder="Message" rows="6" name="message"
+                class="w-full py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none mb-6"></textarea>
+
+            <button
+                class="bg-white text-[#380361] py-2 px-10 rounded-lg font-semibold hover:bg-gray-200 transition-all">
+                Submit
+            </button>
         </div>
 
+        <div class="w-1/2 flex flex-col gap-8">
+            <div>
+                <h2 class="text-5xl font-bold mb-4">Get in Touch.</h2>
 
+                <p class="text-gray-200 leading-relaxed mb-8">
+                    Whether you have questions about our services, need support, or want to share
+                    your feedback, our dedicated team is here to assist you every step of the way.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
 
+                <div class="flex items-center gap-4">
+                    <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Email</h4>
+                        <p class="text-gray-200">dhrumilpatel@gmail.com</p>
+                    </div>
+                </div>
 
+                <div class="flex items-center gap-4">
+                    <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Website</h4>
+                        <p class="text-gray-200">student.com</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Phone</h4>
+                        <p class="text-gray-200">+91 9876543210</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Location</h4>
+                        <p class="text-gray-200">123, Ahmedabad</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
-<section class="m-100">
 
-</section>
 
     <footer class="p-10 w-full flex flex-col gap-4  bg-[#380361] text-white">
         <div class="bg-[#380361] text-white flex w-full justify-between  items-center mb-20">
@@ -145,7 +197,7 @@
         </div>
         <div>
             <div class="border border-[#ADACB8]  mx-8 "></div>
-            
+
         </div>
         <div class="px-[28px] flex w-full justify-between">
             <p class="">&copy; Logo All Rights Reserved 2025</p>
@@ -153,12 +205,24 @@
                 Terms & Condition
             </p>
             <aside class="flex gap-3">
-                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]"><i class="fa-brands fa-facebook-f"></i></div>
-                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]"><i class="fa-brands fa-instagram"></i></div>
-                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]"><i class="fa-brands fa-youtube"></i></div>
-                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]"><i class="fa-brands fa-x-twitter"></i></div>
-                
-                
+                <div
+                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div
+                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div
+                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div
+                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+
+
             </aside>
         </div>
     </footer>

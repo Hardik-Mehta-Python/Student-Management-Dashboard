@@ -4,5 +4,8 @@ password = "password"
 full name = "fullName"
 email = email
 confirm pass = confirmPassword
-
+first name = firstName
+last Name = lastName
+email = email
+message = message
 
