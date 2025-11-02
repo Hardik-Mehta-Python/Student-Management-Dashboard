@@ -2,13 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- ========== HEAD SECTION: Meta, Styles, Fonts ========== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Tailwind CSS -->
     <link rel="stylesheet" href="../output.css">
+
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom dropdown appearance reset -->
     <style>
         #courses {
             appearance: none;
@@ -16,80 +22,77 @@
             -moz-appearance: none;
         }
     </style>
-
 </head>
 
 <body class="font">
+    <!-- ========== MAIN CONTAINER: Split Screen Layout ========== -->
     <div class="flex h-screen">
 
+        <!-- ========== LEFT SECTION: Navigation + Registration Form ========== -->
         <section class="w-[60%] h-screen flex flex-col justify-center items-center relative">
 
-            <header
-                class="h-[72px] w-full flex justify-between items-center px-10 shadow absolute top-0 left-0 bg-white">
+            <!-- ========== NAVIGATION BAR ========== -->
+            <header class="h-[72px] w-full flex justify-between items-center px-10 shadow absolute top-0 left-0 bg-white">
+                <!-- Logo -->
                 <aside class="text-[32px] text-[#380361] font-semibold">Logo</aside>
 
+                <!-- Navigation Links -->
                 <nav class="text-[#380361] text-[18px]">
                     <ul class="flex gap-10 items-center">
                         <li class="group relative">
                             <a href="/index.html">HOME</a>
-                            <div
-                                class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
-                            </div>
+                            <div class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center"></div>
                         </li>
-
                         <li class="group relative">
                             <a href="../contactus.html">CONTACT US</a>
-                            <div
-                                class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
-                            </div>
+                            <div class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center"></div>
                         </li>
-
                         <li class="px-6 py-2 rounded-full bg-[#380361] text-white flex gap-4">
                             <div class="group relative">
                                 <a href="./login.html">LOGIN</a>
-                                <div
-                                    class="group-[.active]:scale-x-100 h-0.5 w-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
-                                </div>
+                                <div class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center"></div>
                             </div>
                             <div class="group relative active">
                                 <a href="./register.html" class="font-bold">REGISTER</a>
-                                <div
-                                    class="group-[.active]:scale-x-100 h-0.5 w-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
-                                </div>
+                                <div class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center"></div>
                             </div>
                         </li>
                     </ul>
                 </nav>
             </header>
 
-
+            <!-- ========== REGISTRATION FORM ========== -->
             <div class="flex flex-col justify-center items-center gap-8 mt-20">
-
+                <!-- Form Title -->
                 <h1 class="text-4xl font-semibold text-[#380361] w-[450px] text-left">Sign up</h1>
 
                 <form action="" class="flex flex-col justify-center items-center gap-4">
-
+                    <!-- Username Field -->
+                    <!-- User's desired username -->
                     <div class="flex flex-col justify-center items-start gap-1">
                         <label>Username</label>
                         <input type="text" placeholder="Username" required name="username"
                             class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
                     </div>
 
-
+                    <!-- Full Name Field -->
+                    <!-- User's full legal name -->
                     <div class="flex flex-col justify-center items-start gap-1">
                         <label>Full Name</label>
                         <input type="text" placeholder="Full Name" required name="fullName"
                             class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
                     </div>
 
-
+                    <!-- Email Field -->
+                    <!-- User's email address -->
                     <div class="flex flex-col justify-center items-start gap-1">
                         <label>Email Address</label>
                         <input type="email" placeholder="abc123@gmail.com" required name="email"
                             class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
                     </div>
 
-
+                    <!-- Password Fields -->
+                    <!-- User's password and confirmation -->
                     <div class="flex items-center justify-between gap-11">
                         <div class="flex flex-col justify-center items-start gap-1">
                             <label>Password</label>
@@ -104,13 +107,14 @@
                         </div>
                     </div>
 
-
+                    <!-- Submit Button -->
+                    <!-- Submits the registration form -->
                     <button
                         class="w-[450px] px-20 py-2 rounded-full bg-[#380361] font-semibold cursor-pointer text-white mt-4 hover:opacity-90 transition-all">
                         Create Account
                     </button>
 
-
+                    <!-- Link to login page -->
                     <h4 class="text-[#380361] cursor-pointer">
                         <a href="./login.html">or Log in</a>
                     </h4>
@@ -118,16 +122,12 @@
             </div>
         </section>
 
-
+        <!-- ========== RIGHT SECTION: IMAGE PANEL ========== -->
         <div class="w-[40%] h-full bg-gradient-to-r from-[#5E00A0] via-[#4A0086] to-[#530086]">
-            <img src="../assets/side.jpg"
-                alt="Registration image" class="h-full w-full object-cover">
+            <!-- Side Image -->
+            <img src="../assets/side.jpg" alt="Registration image" class="h-full w-full object-cover">
         </div>
     </div>
-
-
-
-
 </body>
 
 </html>

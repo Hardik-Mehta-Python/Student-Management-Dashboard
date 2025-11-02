@@ -2,13 +2,20 @@
 <html lang="en">
 
 <head>
+    <!-- ========== HEAD SECTION: Meta, Styles, Fonts ========== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Tailwind CSS -->
     <link rel="stylesheet" href="../output.css">
+
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom dropdown appearance reset -->
     <style>
         #courses {
             appearance: none;
@@ -16,92 +23,93 @@
             -moz-appearance: none;
         }
     </style>
-
 </head>
 
 <body class="font">
+    <!-- ========== MAIN CONTAINER: Split Screen Layout ========== -->
     <div class="flex h-screen">
+
+        <!-- ========== LEFT SECTION: Navigation + Login Form ========== -->
         <section class="w-[60%] h-screen flex flex-col gap-[100px]">
-            <header class="h-[72px]  w-full flex justify-between mb-8 shadow">
-                <aside
-                    class="w-[20%]  h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
+
+            <!-- ========== NAVIGATION BAR ========== -->
+            <header class="h-[72px] w-full flex justify-between mb-8 shadow">
+                <!-- Logo -->
+                <aside class="w-[20%] h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
                     Logo
                 </aside>
 
-                <nav class="w-[50%]  h-full">
-
+                <!-- Navigation Links -->
+                <nav class="w-[50%] h-full">
                     <ul class="flex justify-evenly items-center h-full w-full text-[#380361] text-[20px]">
-
-                        <li class="group relative ">
-                            <a href="/index.html" class="">HOME</a>
-                            <div
-                                class=" group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 group-hover:h-0.5 transition-transform duration-500 origin-center">
-                            </div>
+                        <li class="group relative">
+                            <a href="/index.html">HOME</a>
+                            <div class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center"></div>
                         </li>
-                        <li class="group relative ">
+                        <li class="group relative">
                             <a href="../contactus.html">CONTACT US</a>
-                            <div
-                                class="group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
-                            </div>
+                            <div class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center"></div>
                         </li>
-
                         <li class="px-6 py-2 rounded-full bg-[#380361] text-white flex gap-4">
                             <div class="group relative active">
-                                <a href="./login.html" class=" font-bold">LOGIN</a>
-                                <div
-                                    class="group-[.active]:scale-x-100 h-0.5 w-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
-                                </div>
+                                <a href="./login.html" class="font-bold">LOGIN</a>
+                                <div class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center"></div>
                             </div>
-                            <div class="group relative ">
-                                <a href="./register.html" class=" ">REGISTER</a>
-                                <div
-                                    class="group-[.active]:scale-x-100 h-0.5 w-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
-                                </div>
+                            <div class="group relative">
+                                <a href="./register.html">REGISTER</a>
+                                <div class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center"></div>
                             </div>
-                        </li>
-
-                        <li>
                         </li>
                     </ul>
-
-
-
                 </nav>
             </header>
+
+            <!-- ========== LOGIN FORM ========== -->
             <form class="w-full flex flex-col items-center justify-center gap-4">
+                <!-- Form Title -->
                 <h1 class="text-6xl font-semibold text-[#380361] mb-10">Log in</h1>
+
+                <!-- Username Input Field -->
+                <!-- Accepts the user's username or login ID -->
                 <input type="text" placeholder="👤  Username" required name="username"
                     class="w-[45%] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#380361] bg-[#E7E7E7]" />
+
+                <!-- Password Input Field -->
+                <!-- Accepts the user's password securely -->
                 <input type="password" placeholder="🔒 Password" required name="password"
                     class="w-[45%] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#380361] bg-[#E7E7E7]" />
+
+                <!-- Remember Me Checkbox and Forgot Password Link -->
                 <div class="flex justify-between w-[45%] gap-2 mb-8">
+                    <!-- Checkbox to remember login session -->
                     <div>
                         <input type="checkbox" class="accent-red-600" />
-                        <label for="" class="text-[#8F8F8F]">Remember Me</label>
+                        <label class="text-[#8F8F8F]">Remember Me</label>
                     </div>
-                    <a href="" class="hover:underline hover:text-indigo-500 text-[#8F8F8F]">Forgot Password?</a>
+
+                    <!-- Link to reset forgotten password -->
+                    <a href="#" class="hover:underline hover:text-indigo-500 text-[#8F8F8F]">Forgot Password?</a>
                 </div>
+
+                <!-- Submit Button -->
+                <!-- Submits the login form -->
                 <button type="submit"
                     class="w-[45%] px-20 py-2 rounded-full bg-[#380361] font-semibold cursor-pointer text-white">
                     Login
                 </button>
+
+                <!-- Link to registration page -->
+                <!-- Redirects users to sign-up if they don't have an account -->
                 <h4 class="text-[#380361]"><a href="./register.html">or Sign up</a></h4>
             </form>
-
         </section>
 
-        <div class="w-[40%] h-full bg-linear-to-r from-[#5E00A0] via-[#4A0086] to-[#530086] border ">
-
-            <img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F3tM2S0dDYKXRrrkafV-b1kyKbJIxrXQAUh6_SUVwTOE.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMT4L79gScdCo3Z_4tfnctMLAojDbyklkD1F9RALCW2U&exp=1761859351&signer=media-rpc&token=AAIAAU0ALzN0TTJTMGREWUtYUnJya2FmVi1iMWt5S2JKSXhyWFFBVWg2X1NVVndUT0UuanBnAAAAAAGaNwAx2Fntu6BLC2cKuxWGn4i_O4u0b1BoPD2iorItEWWUDNnk"
-                alt="" class="h-full w-full object-fill">
-
+        <!-- ========== RIGHT SECTION: IMAGE PANEL ========== -->
+        <div class="w-[40%] h-full bg-linear-to-r from-[#5E00A0] via-[#4A0086] to-[#530086]">
+            <!-- Side Image -->
+            <img src="../assets/login_side.png" alt="" class="h-full w-full object-fill">
         </div>
     </div>
-
-
-
-
 </body>
 
 </html>
-<!-- class="h-full flex flex-col items-center justify-center gap-4 " -->

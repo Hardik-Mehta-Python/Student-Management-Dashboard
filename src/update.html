@@ -20,240 +20,266 @@
 </head>
 
 <body class="font">
-    <header class="h-[72px]  w-full flex justify-between mb-8 shadow">
-        <aside class="w-[20%]  h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
+    <!-- Header section with fixed height, full width, spacing between logo and navigation, and shadow -->
+    <header class="h-[72px] w-full flex justify-between mb-8 shadow">
+
+        <!-- Logo area on the left side of the header -->
+        <aside class="w-[20%] h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
             Logo
         </aside>
 
+        <!-- Navigation bar in the center of the header -->
+        <nav class="w-[50%] h-full">
 
-        <nav class="w-[50%]  h-full">
-
+            <!-- Navigation list with evenly spaced items -->
             <ul class="flex justify-evenly items-center h-full w-full text-[#380361] text-[20px]">
 
+                <!-- HOME link with underline animation on hover and active state -->
                 <li class="group relative active">
                     <a href="../index.html" class="font-bold">HOME</a>
                     <div
-                        class=" group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 group-hover:h-0.5 transition-transform duration-500 origin-center">
+                        class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 group-hover:h-0.5 transition-transform duration-500 origin-center">
                     </div>
                 </li>
-                <li class="group relative ">
+
+                <!-- CONTACT US link with hover underline animation -->
+                <li class="group relative">
                     <a href="./contactus.html">CONTACT US</a>
                     <div
-                        class="group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
+                        class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
                     </div>
                 </li>
 
+                <!-- LOG IN button styled with background color and rounded edges -->
+                <li>
+                    <a href="./auth/login.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">
+                        LOG IN
+                    </a>
+                </li>
 
-                <li><a href="./auth/login.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">LOG
-                        IN</a></li>
+                <!-- REGISTER button styled similarly to LOG IN -->
+                <li>
+                    <a href="./auth/register.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">
+                        REGISTER
+                    </a>
+                </li>
 
-                <li><a href="./auth/register.html"
-                        class="border px-6 py-2 rounded-full bg-[#380361] text-white">REGISTER</a></li>
             </ul>
-
 
         </nav>
     </header>
-    <!-- <section class=" flex w-full justify-evenly items-center ">
-        <input type="text" placeholder="🔎︎ Search By Name and Id"
-            class="placeholder:text-[#380361] focus:border-[#380361] focus:outline-none text-[#380361] w-[20%] border py-1.5 px-4 rounded-full border-[#380361]">
 
-        <select name="courses" id="courses"
-            class="border px-4 py-1 rounded-full bg-[#380361] text-white text-lg text-center ">
-            <option value="" selected disabled>Filter By Course</option>
-            <option value="Python">Python</option>
-            <option value="Java">Java</option>
-            <option value="Manual Testing">Manual Testing</option>
-            <option value="Automation Testing">Automation Testing</option>
-        </select>
 
-        <div class="border flex items-center px-4 py-2 rounded-full bg-[#380361] text-white">
-            <a href="./add.html" class="flex items-center gap-2">
-                Add Students
-                <span
-                    class="flex justify-center items-center h-6 w-6 rounded-full bg-[#380361] text-white border border-white">
-                    <i class="fa-solid fa-plus text-sm"></i>
-                </span>
-            </a>
+    <!-- Section heading for the Update Student form -->
+<div class="text-center mt-10 mb-6 flex flex-col w-[19%] m-auto ">
+    <h1 class="text-3xl font-bold text-[#380361] uppercase tracking-wide">Update Student</h1>
+    <!-- Decorative underline below the heading -->
+    <div class="h-0.5 w-full bg-[#380361] mx-auto mt-1 rounded"></div>
+</div>
+
+<!-- Container for the form, centered horizontally -->
+<div class="w-full flex justify-center items-center mb-20">
+    <!-- Form card with purple background and rounded corners -->
+    <form class="bg-[#380361] text-white w-[500px] rounded-3xl p-8 flex flex-col gap-4 shadow-lg">
+
+        <!-- Full Name input field -->
+        <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Full Name</label>
+            <input type="text" placeholder="Full Name" required
+                class="w-full rounded-full px-4 py-2 text-[#380361] bg-white focus:outline-none" />
         </div>
 
+        <!-- Profile picture upload field -->
+        <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Upload Profile Picture</label>
+            <input type="file" required
+                class="w-full rounded-full px-4 py-2 text-[#380361] bg-white cursor-pointer focus:outline-none" />
+        </div>
 
-
-
-
-    </section> -->
-    </section>
-    <div class="text-center mt-10 mb-6  flex flex-col w-[19%] m-auto ">
-        <h1 class="text-3xl font-bold text-[#380361] uppercase tracking-wide">Update Student</h1>
-        <div class="h-0.5 w-full bg-[#380361] mx-auto mt-1 rounded"></div>
-    </div>
-
-
-    <div class="w-full flex justify-center items-center mb-20">
-        <form class="bg-[#380361] text-white w-[500px] rounded-3xl p-8 flex flex-col gap-4 shadow-lg">
-
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium">Full Name</label>
-                <input type="text" placeholder="Full Name" required
+        <!-- Row containing Age, Gender, and Date of Birth -->
+        <div class="flex justify-between gap-4">
+            <!-- Age input -->
+            <div class="flex flex-col gap-2 w-1/3">
+                <label class="text-sm font-medium">Age</label>
+                <input type="number" placeholder="18" min="1" max="100" required
                     class="w-full rounded-full px-4 py-2 text-[#380361] bg-white focus:outline-none" />
             </div>
 
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium">Upload Profile Picture</label>
-                <input type="file" required
+            <!-- Gender dropdown -->
+            <div class="flex flex-col gap-2 w-1/3">
+                <label class="text-sm font-medium">Gender</label>
+                <select required
+                    class="w-full rounded-full px-4 py-2 text-[#380361] bg-white appearance-none cursor-pointer focus:outline-none">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <!-- Date of Birth input -->
+            <div class="flex flex-col gap-2 w-1/3">
+                <label class="text-sm font-medium">Date of Birth</label>
+                <input type="date" required
                     class="w-full rounded-full px-4 py-2 text-[#380361] bg-white cursor-pointer focus:outline-none" />
             </div>
+        </div>
 
-            <div class="flex justify-between gap-4">
-                <div class="flex flex-col gap-2 w-1/3">
-                    <label class="text-sm font-medium">Age</label>
-                    <input type="number" placeholder="18" min="1" max="100" required
-                        class="w-full rounded-full px-4 py-2 text-[#380361] bg-white focus:outline-none" />
-                </div>
-
-                <div class="flex flex-col gap-2 w-1/3">
-                    <label class="text-sm font-medium">Gender</label>
-                    <select required
-                        class="w-full rounded-full px-4 py-2 text-[#380361] bg-white appearance-none cursor-pointer focus:outline-none">
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-
-                <div class="flex flex-col gap-2 w-1/3">
-                    <label class="text-sm font-medium">Date of Birth</label>
-                    <input type="date" required
-                        class="w-full rounded-full px-4 py-2 text-[#380361] bg-white cursor-pointer focus:outline-none" />
-                </div>
+        <!-- Row containing Phone Number and Course selection -->
+        <div class="flex justify-between gap-4">
+            <!-- Phone number input with numeric validation -->
+            <div class="flex flex-col gap-2 w-1/2">
+                <label class="text-sm font-medium">Phone No.</label>
+                <input type="tel" placeholder="9876543210" maxlength="10"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" required
+                    class="w-full rounded-full px-4 py-2 text-[#380361] bg-white placeholder:text-gray-500 focus:outline-none" />
             </div>
 
-            <div class="flex justify-between gap-4">
-                <div class="flex flex-col gap-2 w-1/2">
-                    <label class="text-sm font-medium">Phone No.</label>
-                    <input type="tel" placeholder="9876543210" maxlength="10"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" required
-                        class="w-full rounded-full px-4 py-2 text-[#380361] bg-white placeholder:text-gray-500 focus:outline-none" />
-                </div>
+            <!-- Course dropdown -->
+            <div class="flex flex-col gap-2 w-1/2">
+                <label class="text-sm font-medium">Course</label>
+                <select required
+                    class="w-full rounded-full px-4 py-2 text-[#380361] bg-white appearance-none cursor-pointer focus:outline-none">
+                    <option selected disabled>Select Course</option>
+                    <option>Python Full Stack</option>
+                    <option>Java Full Stack</option>
+                    <option>React Developer</option>
+                    <option>Data Science</option>
+                </select>
+            </div>
+        </div>
 
-                <div class="flex flex-col gap-2 w-1/2">
-                    <label class="text-sm font-medium">Course</label>
-                    <select required
-                        class="w-full rounded-full px-4 py-2 text-[#380361] bg-white appearance-none cursor-pointer focus:outline-none">
-                        <option selected disabled>Select Course</option>
-                        <option>Python Full Stack</option>
-                        <option>Java Full Stack</option>
-                        <option>React Developer</option>
-                        <option>Data Science</option>
-                    </select>
-                </div>
+        <!-- Email input field -->
+        <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Email</label>
+            <input type="email" placeholder="abc123@gmail.com" required
+                class="w-full rounded-full px-4 py-2 text-[#380361] bg-white focus:outline-none" />
+        </div>
+
+        <!-- Address input field -->
+        <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Address</label>
+            <input type="text" placeholder="Ahmedabad..."
+                class="w-full rounded-full px-4 py-2 text-[#380361] bg-white focus:outline-none" />
+        </div>
+
+        <!-- Action buttons: Cancel and Submit -->
+        <div class="flex justify-between mt-4">
+            <!-- Cancel button redirects to homepage -->
+            <button type=""
+                class="w-[45%] py-2 rounded-full bg-white text-[#380361] font-semibold hover:bg-gray-200 transition-all">
+                <a href="../index.html">Cancel</a>
+            </button>
+
+            <!-- Submit button to finalize the form -->
+            <button type="submit"
+                class="w-[45%] py-2 rounded-full bg-[#5E00A0] text-white font-semibold hover:bg-[#4A0086] transition-all">
+                Done
+            </button>
+        </div>
+    </form>
+</div>
+
+    <!-- Footer container with padding, full width, vertical layout, purple background, and white text -->
+<footer class="p-10 w-full flex flex-col gap-4 bg-[#380361] text-white">
+
+    <!-- Top section: logo, newsletter form, and navigation links -->
+    <div class="bg-[#380361] text-white flex w-full justify-between items-center mb-20">
+
+        <!-- Logo and newsletter subscription form -->
+        <div class="flex flex-col gap-5 w-[30%] ml-10">
+            <!-- Logo text -->
+            <h1 class="text-[40px] flex justify-start items-center text-white font-medium">Logo</h1>
+
+            <!-- Newsletter prompt -->
+            <p class="text-[20px]">Stay in the loop and signup for the Wardiere newsletter</p>
+
+            <!-- Newsletter form with input and submit button -->
+            <form class="py-2 px-4 border rounded-full bg-white flex justify-between">
+                <input type="text" placeholder="Enter your email"
+                    class="placeholder:text-[#ADACB8] placeholder:text-lg text-[#ADACB8] text-lg focus:outline-none w-[80%]">
+                <span class="text-white h-10 w-10 rounded-full flex justify-center items-center bg-[#380361]">
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </span>
+            </form>
+        </div>
+
+        <!-- Footer navigation links grouped into three columns -->
+        <div class="flex justify-evenly w-[50%]">
+
+            <!-- Company links -->
+            <div class="flex flex-col gap-4">
+                <h1 class="font-medium">Company</h1>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Solutions</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Career</a></li>
+                </ul>
             </div>
 
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium">Email</label>
-                <input type="email" placeholder="abc123@gmail.com" required
-                    class="w-full rounded-full px-4 py-2 text-[#380361] bg-white focus:outline-none" />
+            <!-- Documentation links -->
+            <div class="flex flex-col gap-4">
+                <h1 class="font-medium">Documentation</h1>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="">Help Centre</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
             </div>
 
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-medium">Address</label>
-                <input type="text" placeholder="Ahmedabad..."
-                    class="w-full rounded-full px-4 py-2 text-[#380361] bg-white focus:outline-none" />
+            <!-- Social media links -->
+            <div class="flex flex-col gap-4">
+                <h1 class="font-medium">Social</h1>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Youtube</a></li>
+                    <li><a href="">Twitter</a></li>
+                </ul>
             </div>
-
-            <div class="flex justify-between mt-4">
-                <button type=""
-                    class="w-[45%] py-2 rounded-full bg-white text-[#380361] font-semibold hover:bg-gray-200 transition-all"><a
-                        href="../index.html">Cancel</a></button>
-                <button type="submit"
-                    class="w-[45%] py-2 rounded-full bg-[#5E00A0] text-white font-semibold hover:bg-[#4A0086] transition-all">Done</button>
-            </div>
-        </form>
+        </div>
     </div>
 
-    <footer class="p-10 w-full flex flex-col gap-4  bg-[#380361] text-white">
-        <div class="bg-[#380361] text-white flex w-full justify-between  items-center mb-20">
-            <div class="  flex flex-col gap-5 w-[30%] ml-10 ">
-                <h1 class="   text-[40px] flex justify-start items-center  text-white font-medium">Logo</h1>
-                <p class="text-[20px]">Stay in the loop and signup for the Wardiere newslwtter</p>
-                <form class="py-2 px-4 border rounded-full bg-white flex justify-between">
-                    <input type="text" placeholder="Enter your email"
-                        class="placeholder:text-[#ADACB8] placeholder:text-lg text-[#ADACB8] text-lg focus:outline-none w-[80%]">
-                    <span
-                        class="text-white h-10 w-10 rounded-full flex justify-center items-center bg-[#380361]"><button
-                            type="submit"><i class="fa-solid fa-arrow-right"></i></button></span>
-                </form>
+    <!-- Divider line -->
+    <div>
+        <div class="border border-[#ADACB8] mx-8"></div>
+    </div>
+
+    <!-- Bottom section: copyright, terms, and social icons -->
+    <div class="px-[28px] flex w-full justify-between">
+        <!-- Copyright notice -->
+        <p>&copy; Logo All Rights Reserved 2025</p>
+
+        <!-- Terms link -->
+        <p>Terms & Condition</p>
+
+        <!-- Social media icon buttons with hover effects -->
+        <aside class="flex gap-3">
+            <!-- Facebook icon -->
+            <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]">
+                <i class="fa-brands fa-facebook-f"></i>
             </div>
-            <div class="flex justify-evenly   w-[50%]">
-                <div class="flex flex-col gap-4">
-                    <h1 class="font-medium">
-                        Company
-                    </h1>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Solutions</a></li>
-                        <li><a href="">Pricing</a></li>
-                        <li><a href="">Team</a></li>
-                        <li><a href="">Career</a></li>
 
-                    </ul>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    <h1 class="font-medium">
-                        Documentation
-                    </h1>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="">Help Centre</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Privacy Policy</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    <h1 class="font-medium">
-                        Social
-                    </h1>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="">Facebook</a></li>
-                        <li><a href="">Instagram</a></li>
-                        <li><a href="">Youtube</a></li>
-                        <li><a href="">Twitter</a></li>
-
-                    </ul>
-                </div>
+            <!-- Instagram icon -->
+            <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]">
+                <i class="fa-brands fa-instagram"></i>
             </div>
-        </div>
-        <div>
-            <div class="border border-[#ADACB8]  mx-8 "></div>
 
-        </div>
-        <div class="px-[28px] flex w-full justify-between">
-            <p class="">&copy; Logo All Rights Reserved 2025</p>
-            <p>
-                Terms & Condition
-            </p>
-            <aside class="flex gap-3">
-                <div
-                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]">
-                    <i class="fa-brands fa-facebook-f"></i></div>
-                <div
-                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]">
-                    <i class="fa-brands fa-instagram"></i></div>
-                <div
-                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]">
-                    <i class="fa-brands fa-youtube"></i></div>
-                <div
-                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]">
-                    <i class="fa-brands fa-x-twitter"></i></div>
+            <!-- YouTube icon -->
+            <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
 
-
-            </aside>
-        </div>
-    </footer>
+            <!-- Twitter (X) icon -->
+            <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]">
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </aside>
+    </div>
+</footer>
 
 
 

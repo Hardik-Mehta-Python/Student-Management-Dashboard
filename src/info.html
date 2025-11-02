@@ -54,39 +54,75 @@
 
         </nav>
     </header>
-    <!-- <section class=" flex w-full justify-evenly items-center ">
-        <input type="text" placeholder="🔎︎ Search By Name and Id"
-            class="placeholder:text-[#380361] focus:border-[#380361] focus:outline-none text-[#380361] w-[20%] border py-1.5 px-4 rounded-full border-[#380361]">
+    <!-- Full-screen centered container with white background -->
+    <div class="flex justify-center items-center  bg-white">
 
-        <select name="courses" id="courses"
-            class="border px-4 py-1 rounded-full bg-[#380361] text-white text-lg text-center ">
-            <option value="" selected disabled>Filter By Course</option>
-            <option value="Python">Python</option>
-            <option value="Java">Java</option>
-            <option value="Manual Testing">Manual Testing</option>
-            <option value="Automation Testing">Automation Testing</option>
-        </select>
+        <!-- Centered content block -->
+        <div class="text-center">
 
-        <div class="border flex items-center px-4 py-2 rounded-full bg-[#380361] text-white">
-            <a href="./add.html" class="flex items-center gap-2">
-                Add Students
-                <span
-                    class="flex justify-center items-center h-6 w-6 rounded-full bg-[#380361] text-white border border-white">
-                    <i class="fa-solid fa-plus text-sm"></i>
-                </span>
-            </a>
+            <!-- Section title -->
+            <h2 class="text-lg font-bold text-purple-900 mb-6 tracking-wide">
+                USER PROFILE
+            </h2>
+
+            <!-- Profile card with purple background and rounded corners -->
+            <div
+                class="bg-[#380361] text-white rounded-xl w-150 p-8 shadow-lg flex flex-col items-center justify-center">
+
+                <!-- User avatar image -->
+                <div class="flex justify-center mb-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" alt="User Avatar"
+                        class="w-20 h-20 rounded-full bg-white p-1" />
+                </div>
+
+                <!-- User name display -->
+                <h3 class="font-bold text-lg mb-6">Dhrumil Patel</h3>
+
+                <!-- Profile form -->
+                <form class="space-y-4">
+
+                    <!-- Profile picture upload field -->
+                    <div class="text-left w-[400px]">
+                        <label class="block text-sm font-semibold mb-1">Update Profile Picture</label>
+                        <input type="file"
+                            class="w-full bg-white text-gray-700 rounded-full px-4 py-2 focus:outline-none hover:cursor-pointer" />
+                    </div>
+
+                    <!-- Full name field (read-only) -->
+                    <div class="text-left">
+                        <label class="block text-sm font-semibold mb-1">Full Name</label>
+                        <input type="text" value="Dhrumil Patel"
+                            class="w-full bg-white text-gray-700 rounded-full px-4 py-2 focus:outline-none" readonly />
+                    </div>
+
+                    <!-- Email field (read-only) -->
+                    <div class="text-left">
+                        <label class="block text-sm font-semibold mb-1">Email</label>
+                        <input type="email" value="dhrumilpatel@gmail.com"
+                            class="w-full bg-white text-gray-700 rounded-full px-4 py-2 focus:outline-none" readonly />
+                    </div>
+
+                    <!-- Action buttons: Go Back and Delete Profile -->
+                    <div class="flex justify-between pt-6">
+                        <!-- Go Back button -->
+                        <button type="button"
+                            class="bg-white text-purple-900 font-semibold rounded-full px-15 py-2 hover:bg-gray-100 transition hover:cursor-pointer">
+                            Go Back
+                        </button>
+
+                        <!-- Delete Profile button -->
+                        <button type="button"
+                            class="bg-red-500 text-white font-semibold rounded-full px-6 py-2 hover:bg-red-600 transition hover:cursor-pointer">
+                            Delete Your Profile
+                        </button>
+                    </div>
+
+                </form>
+            </div>
         </div>
+    </div>
 
-
-
-
-
-    </section> -->
-<section class="m-100">
-
-</section>
-
-    <footer class="p-10 w-full flex flex-col gap-4  bg-[#380361] text-white">
+    <footer class="p-10 w-full flex flex-col gap-4  bg-[#380361] text-white mt-10">
         <div class="bg-[#380361] text-white flex w-full justify-between  items-center mb-20">
             <div class="  flex flex-col gap-5 w-[30%] ml-10 ">
                 <h1 class="   text-[40px] flex justify-start items-center  text-white font-medium">Logo</h1>
@@ -144,7 +180,7 @@
         </div>
         <div>
             <div class="border border-[#ADACB8]  mx-8 "></div>
-            
+
         </div>
         <div class="px-[28px] flex w-full justify-between">
             <p class="">&copy; Logo All Rights Reserved 2025</p>
@@ -152,12 +188,24 @@
                 Terms & Condition
             </p>
             <aside class="flex gap-3">
-                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]"><i class="fa-brands fa-facebook-f"></i></div>
-                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]"><i class="fa-brands fa-instagram"></i></div>
-                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]"><i class="fa-brands fa-youtube"></i></div>
-                <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]"><i class="fa-brands fa-x-twitter"></i></div>
-                
-                
+                <div
+                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div
+                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div
+                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div
+                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+
+
             </aside>
         </div>
     </footer>

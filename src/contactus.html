@@ -20,212 +20,244 @@
 
 </head>
 
-<body class="font">
-    <header class="h-[72px]  w-full flex justify-between mb-8 shadow">
-        <aside class="w-[20%]  h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
-            Logo
-        </aside>
+<body class="">
+    <!-- Header section with logo and navigation bar -->
+<header class="h-[72px] w-full flex justify-between mb-8 shadow">
+    
+    <!-- Logo area on the left side -->
+    <aside class="w-[20%] h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
+        Logo
+    </aside>
 
+    <!-- Navigation menu in the center -->
+    <nav class="w-[50%] h-full">
+        <ul class="flex justify-evenly items-center h-full w-full text-[#380361] text-[20px]">
+            
+            <!-- Home navigation link -->
+            <li class="group relative">
+                <a href="../index.html" class="">HOME</a>
+                <!-- Animated underline on hover -->
+                <div
+                    class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 group-hover:h-0.5 transition-transform duration-500 origin-center">
+                </div>
+            </li>
 
-        <nav class="w-[50%]  h-full">
+            <!-- Contact Us navigation link (active page) -->
+            <li class="group relative active">
+                <a href="./contactus.html" class="font-bold">CONTACT US</a>
+                <!-- Animated underline on hover -->
+                <div
+                    class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
+                </div>
+            </li>
 
-            <ul class="flex justify-evenly items-center h-full w-full text-[#380361] text-[20px]">
+            <!-- Login button styled as a pill -->
+            <li>
+                <a href="./auth/login.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">
+                    LOG IN
+                </a>
+            </li>
 
-                <li class="group relative ">
-                    <a href="../index.html" class="">HOME</a>
-                    <div
-                        class=" group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 group-hover:h-0.5 transition-transform duration-500 origin-center">
-                    </div>
-                </li>
-                <li class="group relative active">
-                    <a href="./contactus.html" class="font-bold">CONTACT US</a>
-                    <div
-                        class="group-[.active]:scale-x-100  h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
-                    </div>
-                </li>
+            <!-- Register button styled as a pill -->
+            <li>
+                <a href="./auth/register.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">
+                    REGISTER
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
+<!-- Contact section with form and contact details -->
+<section
+    class="mt-14 w-[85%] mx-auto bg-[#380361] p-12 rounded-3xl text-white shadow-2xl flex justify-between items-start gap-12 m-auto mb-16">
 
-                <li><a href="./auth/login.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">LOG
-                        IN</a></li>
+    <!-- Left side: Contact form -->
+    <div class="w-1/2">
+        <!-- Section heading -->
+        <h2 class="text-3xl font-semibold mb-6">Fill the form</h2>
 
-                <li><a href="./auth/register.html"
-                        class="border px-6 py-2 rounded-full bg-[#380361] text-white">REGISTER</a></li>
-            </ul>
-
-
-        </nav>
-    </header>
-
-    <section
-        class="mt-14 w-[85%] mx-auto bg-[#380361] p-12 rounded-3xl text-white shadow-2xl flex justify-between items-start gap-12 m-auto mb-16">
-
-        <div class="w-1/2">
-            <h2 class="text-3xl font-semibold mb-6">Fill the form</h2>
-
-            <div class="flex gap-4 mb-4">
-                <input type="text" placeholder="First Name" name="firstName"
-                    class="w-1/2 py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none" />
-                <input type="text" placeholder="Last Name" name="lastName"
-                    class="w-1/2 py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none" />
-            </div>
-
-            <input type="email" placeholder="Email Address" name="email"
-                class="w-full py-3 px-4 rounded-lg mb-4 text-[#380361] bg-[#FAFAFF] focus:outline-none" />
-
-            <textarea placeholder="Message" rows="6" name="message"
-                class="w-full py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none mb-6"></textarea>
-
-            <button
-                class="bg-white text-[#380361] py-2 px-10 rounded-lg font-semibold hover:bg-gray-200 transition-all">
-                Submit
-            </button>
+        <!-- First and Last Name input fields side by side -->
+        <div class="flex gap-4 mb-4">
+            <input type="text" placeholder="First Name" name="firstName"
+                class="w-1/2 py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none" />
+            <input type="text" placeholder="Last Name" name="lastName"
+                class="w-1/2 py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none" />
         </div>
 
-        <div class="w-1/2 flex flex-col gap-8">
-            <div>
-                <h2 class="text-5xl font-bold mb-4">Get in Touch.</h2>
+        <!-- Email input field -->
+        <input type="email" placeholder="Email Address" name="email"
+            class="w-full py-3 px-4 rounded-lg mb-4 text-[#380361] bg-[#FAFAFF] focus:outline-none" />
 
-                <p class="text-gray-200 leading-relaxed mb-8">
-                    Whether you have questions about our services, need support, or want to share
-                    your feedback, our dedicated team is here to assist you every step of the way.
-                </p>
-            </div>
-            <div class="grid grid-cols-2 gap-8">
+        <!-- Message textarea -->
+        <textarea placeholder="Message" rows="6" name="message"
+            class="w-full py-3 px-4 rounded-lg text-[#380361] bg-[#FAFAFF] focus:outline-none mb-6"></textarea>
 
-                <div class="flex items-center gap-4">
-                    <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Email</h4>
-                        <p class="text-gray-200">dhrumilpatel@gmail.com</p>
-                    </div>
-                </div>
+        <!-- Submit button -->
+        <button
+            class="bg-white text-[#380361] py-2 px-10 rounded-lg font-semibold hover:bg-gray-200 transition-all">
+            Submit
+        </button>
+    </div>
 
-                <div class="flex items-center gap-4">
-                    <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Website</h4>
-                        <p class="text-gray-200">student.com</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Phone</h4>
-                        <p class="text-gray-200">+91 9876543210</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Location</h4>
-                        <p class="text-gray-200">123, Ahmedabad</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <footer class="p-10 w-full flex flex-col gap-4  bg-[#380361] text-white">
-        <div class="bg-[#380361] text-white flex w-full justify-between  items-center mb-20">
-            <div class="  flex flex-col gap-5 w-[30%] ml-10 ">
-                <h1 class="   text-[40px] flex justify-start items-center  text-white font-medium">Logo</h1>
-                <p class="text-[20px]">Stay in the loop and signup for the Wardiere newslwtter</p>
-                <form class="py-2 px-4 border rounded-full bg-white flex justify-between">
-                    <input type="text" placeholder="Enter your email"
-                        class="placeholder:text-[#ADACB8] placeholder:text-lg text-[#ADACB8] text-lg focus:outline-none w-[80%]">
-                    <span
-                        class="text-white h-10 w-10 rounded-full flex justify-center items-center bg-[#380361]"><button
-                            type="submit"><i class="fa-solid fa-arrow-right"></i></button></span>
-                </form>
-            </div>
-            <div class="flex justify-evenly   w-[50%]">
-                <div class="flex flex-col gap-4">
-                    <h1 class="font-medium">
-                        Company
-                    </h1>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Solutions</a></li>
-                        <li><a href="">Pricing</a></li>
-                        <li><a href="">Team</a></li>
-                        <li><a href="">Career</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    <h1 class="font-medium">
-                        Documentation
-                    </h1>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="">Help Centre</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Privacy Policy</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    <h1 class="font-medium">
-                        Social
-                    </h1>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="">Facebook</a></li>
-                        <li><a href="">Instagram</a></li>
-                        <li><a href="">Youtube</a></li>
-                        <li><a href="">Twitter</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <!-- Right side: Contact information -->
+    <div class="w-1/2 flex flex-col gap-8">
+        <!-- Heading and description -->
         <div>
-            <div class="border border-[#ADACB8]  mx-8 "></div>
-
-        </div>
-        <div class="px-[28px] flex w-full justify-between">
-            <p class="">&copy; Logo All Rights Reserved 2025</p>
-            <p>
-                Terms & Condition
+            <h2 class="text-5xl font-bold mb-4">Get in Touch.</h2>
+            <p class="text-gray-200 leading-relaxed mb-8">
+                Whether you have questions about our services, need support, or want to share
+                your feedback, our dedicated team is here to assist you every step of the way.
             </p>
-            <aside class="flex gap-3">
-                <div
-                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </div>
-                <div
-                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]">
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-                <div
-                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]">
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-                <div
-                    class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </div>
-
-
-            </aside>
         </div>
-    </footer>
+
+        <!-- Contact details in a grid layout -->
+        <div class="grid grid-cols-2 gap-8">
+            <!-- Email info -->
+            <div class="flex items-center gap-4">
+                <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Email</h4>
+                    <p class="text-gray-200">dhrumilpatel@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Website info -->
+            <div class="flex items-center gap-4">
+                <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Website</h4>
+                    <p class="text-gray-200">student.com</p>
+                </div>
+            </div>
+
+            <!-- Phone info -->
+            <div class="flex items-center gap-4">
+                <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Phone</h4>
+                    <p class="text-gray-200">+91 9876543210</p>
+                </div>
+            </div>
+
+            <!-- Location info -->
+            <div class="flex items-center gap-4">
+                <div class="bg-white text-[#380361] p-3 rounded-lg text-xl">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Location</h4>
+                    <p class="text-gray-200">123, Ahmedabad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer section with newsletter, navigation links, and social icons -->
+<footer class="p-10 w-full flex flex-col gap-4 bg-[#380361] text-white">
+
+    <!-- Top part of the footer: newsletter and link columns -->
+    <div class="bg-[#380361] text-white flex w-full justify-between items-center mb-20">
+
+        <!-- Newsletter subscription area -->
+        <div class="flex flex-col gap-5 w-[30%] ml-10">
+            <!-- Logo or brand name -->
+            <h1 class="text-[40px] flex justify-start items-center text-white font-medium">Logo</h1>
+            <!-- Newsletter description -->
+            <p class="text-[20px]">Stay in the loop and signup for the Wardiere newsletter</p>
+
+            <!-- Email subscription form -->
+            <form class="py-2 px-4 border rounded-full bg-white flex justify-between">
+                <input type="text" placeholder="Enter your email"
+                    class="placeholder:text-[#ADACB8] placeholder:text-lg text-[#ADACB8] text-lg focus:outline-none w-[80%]">
+                <span class="text-white h-10 w-10 rounded-full flex justify-center items-center bg-[#380361]">
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </span>
+            </form>
+        </div>
+
+        <!-- Footer navigation links -->
+        <div class="flex justify-evenly w-[50%]">
+
+            <!-- Company links -->
+            <div class="flex flex-col gap-4">
+                <h1 class="font-medium">Company</h1>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Solutions</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Career</a></li>
+                </ul>
+            </div>
+
+            <!-- Documentation links -->
+            <div class="flex flex-col gap-4">
+                <h1 class="font-medium">Documentation</h1>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="">Help Centre</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Social media links -->
+            <div class="flex flex-col gap-4">
+                <h1 class="font-medium">Social</h1>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Youtube</a></li>
+                    <li><a href="">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divider line -->
+    <div>
+        <div class="border border-[#ADACB8] mx-8"></div>
+    </div>
+
+    <!-- Bottom part of the footer: copyright and social icons -->
+    <div class="px-7 flex w-full justify-between">
+        <!-- Copyright -->
+        <p>&copy; Logo All Rights Reserved 2025</p>
+
+        <!-- Terms and Conditions -->
+        <p>Terms & Condition</p>
+
+        <!-- Social media icon buttons -->
+        <aside class="flex gap-3">
+            <!-- Facebook -->
+            <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1877F2]">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <!-- Instagram -->
+            <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#d62976]">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <!-- YouTube -->
+            <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#FF0000]">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <!-- Twitter (X) -->
+            <div class="w-7 h-7 rounded-full bg-white text-[#380361] flex justify-center items-center hover:text-[#1DA1F2]">
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </aside>
+    </div>
+</footer>
 
 
 
