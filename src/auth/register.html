@@ -32,7 +32,8 @@
         <section class="w-[60%] h-screen flex flex-col justify-center items-center relative">
 
             <!-- ========== NAVIGATION BAR ========== -->
-            <header class="h-[72px] w-full flex justify-between items-center px-10 shadow absolute top-0 left-0 bg-white">
+            <header
+                class="h-[72px] w-full flex justify-between items-center px-10 shadow absolute top-0 left-0 bg-white">
                 <!-- Logo -->
                 <aside class="text-[32px] text-[#380361] font-semibold">Logo</aside>
 
@@ -41,20 +42,28 @@
                     <ul class="flex gap-10 items-center">
                         <li class="group relative">
                             <a href="/index.html">HOME</a>
-                            <div class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center"></div>
+                            <div
+                                class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center">
+                            </div>
                         </li>
                         <li class="group relative">
                             <a href="../contactus.html">CONTACT US</a>
-                            <div class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center"></div>
+                            <div
+                                class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center">
+                            </div>
                         </li>
                         <li class="px-6 py-2 rounded-full bg-[#380361] text-white flex gap-4">
-                            <div class="group relative">
+                            <div class="group relative ">
                                 <a href="./login.html">LOGIN</a>
-                                <div class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center"></div>
+                                <div
+                                    class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center">
+                                </div>
                             </div>
-                            <div class="group relative active">
+                            <div class="group relative">
                                 <a href="./register.html" class="font-bold">REGISTER</a>
-                                <div class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center"></div>
+                                <div
+                                    class="h-0.5 w-full bg-white scale-x-100 transition-transform duration-500 origin-center">
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -66,12 +75,12 @@
                 <!-- Form Title -->
                 <h1 class="text-4xl font-semibold text-[#380361] w-[450px] text-left">Sign up</h1>
 
-                <form action="" class="flex flex-col justify-center items-center gap-4">
+                <form action="" id="registerForm" class="flex flex-col justify-center items-center gap-4">
                     <!-- Username Field -->
                     <!-- User's desired username -->
                     <div class="flex flex-col justify-center items-start gap-1">
                         <label>Username</label>
-                        <input type="text" placeholder="Username" required name="username"
+                        <input type="text" placeholder="Username" required id="username" name="username"
                             class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
                     </div>
 
@@ -79,7 +88,7 @@
                     <!-- User's full legal name -->
                     <div class="flex flex-col justify-center items-start gap-1">
                         <label>Full Name</label>
-                        <input type="text" placeholder="Full Name" required name="fullName"
+                        <input type="text" placeholder="Full Name" required id="fullName" name="fullName"
                             class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
                     </div>
 
@@ -87,7 +96,7 @@
                     <!-- User's email address -->
                     <div class="flex flex-col justify-center items-start gap-1">
                         <label>Email Address</label>
-                        <input type="email" placeholder="abc123@gmail.com" required name="email"
+                        <input type="email" placeholder="abc123@gmail.com" required id="email" name="email"
                             class="w-[450px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
                     </div>
 
@@ -96,13 +105,15 @@
                     <div class="flex items-center justify-between gap-11">
                         <div class="flex flex-col justify-center items-start gap-1">
                             <label>Password</label>
-                            <input type="password" placeholder="****" required name="password"
+                            <input type="password" placeholder="****" required id="password" name="password"
+                                minlength="8" maxlength="16"
                                 class="w-[200px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
                         </div>
 
                         <div class="flex flex-col justify-center items-start gap-1">
                             <label>Confirm Password</label>
-                            <input type="password" placeholder="****" required name="confirmPassword"
+                            <input type="password" placeholder="****" required id="confirmPassword"
+                                name="confirmPassword"
                                 class="w-[200px] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#8F8F8F] bg-[#E7E7E7]" />
                         </div>
                     </div>
@@ -128,6 +139,7 @@
             <img src="../assets/side.jpg" alt="Registration image" class="h-full w-full object-cover">
         </div>
     </div>
+    <script src="./register.js"></script>
 </body>
 
 </html>

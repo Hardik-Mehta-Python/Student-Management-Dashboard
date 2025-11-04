@@ -1,0 +1,34 @@
+{
+  "user": [
+    {
+      "username": "hardik_mehta",
+      "fullName": "Hardik Mehta",
+      "email": "hardikrajguru7507@gmail.com",
+      "password": "Hardik@2111",
+      "confirmPassword": "Hardik@2111",
+      "id": "17b3"
+    },
+    {
+      "id": "76e8",
+      "username": "hardik",
+      "fullName": "Hardik Mehta",
+      "email": "thehardik21115@gmail.com",
+      "password": "8160204826",
+      "confirmPassword": "8160204826"
+    },
+    {
+      "id": "bb7b",
+      "username": "dhrumil12",
+      "fullName": "Dhrumil Patel",
+      "email": "thehardik21115@gmail.com",
+      "password": "8160204826"
+    },
+    {
+      "id": "5a77",
+      "username": "bhavin15",
+      "fullName": "Bhavin Savaliya",
+      "email": "bhavinsavaliya@gmail.com",
+      "password": "15112004"
+    }
+  ]
+}

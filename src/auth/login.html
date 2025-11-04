@@ -35,7 +35,8 @@
             <!-- ========== NAVIGATION BAR ========== -->
             <header class="h-[72px] w-full flex justify-between mb-8 shadow">
                 <!-- Logo -->
-                <aside class="w-[20%] h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
+                <aside
+                    class="w-[20%] h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
                     Logo
                 </aside>
 
@@ -44,20 +45,28 @@
                     <ul class="flex justify-evenly items-center h-full w-full text-[#380361] text-[20px]">
                         <li class="group relative">
                             <a href="/index.html">HOME</a>
-                            <div class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center"></div>
+                            <div
+                                class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center">
+                            </div>
                         </li>
                         <li class="group relative">
                             <a href="../contactus.html">CONTACT US</a>
-                            <div class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center"></div>
+                            <div
+                                class="group-hover:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 transition-transform duration-500 origin-center">
+                            </div>
                         </li>
                         <li class="px-6 py-2 rounded-full bg-[#380361] text-white flex gap-4">
-                            <div class="group relative active">
+                            <div class="group relative">
                                 <a href="./login.html" class="font-bold">LOGIN</a>
-                                <div class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center"></div>
+                                <div
+                                    class="h-0.5 w-full bg-white scale-x-100 transition-transform duration-500 origin-center">
+                                </div>
                             </div>
                             <div class="group relative">
                                 <a href="./register.html">REGISTER</a>
-                                <div class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center"></div>
+                                <div
+                                    class="group-hover:scale-x-100 h-0.5 w-full bg-white scale-x-0 transition-transform duration-500 origin-center">
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -65,18 +74,18 @@
             </header>
 
             <!-- ========== LOGIN FORM ========== -->
-            <form class="w-full flex flex-col items-center justify-center gap-4">
+            <form class="w-full flex flex-col items-center justify-center gap-4" id="loginForm">
                 <!-- Form Title -->
                 <h1 class="text-6xl font-semibold text-[#380361] mb-10">Log in</h1>
 
                 <!-- Username Input Field -->
                 <!-- Accepts the user's username or login ID -->
-                <input type="text" placeholder="👤  Username" required name="username"
+                <input type="text" placeholder="👤  Username" required name="username" id="loginUsername"
                     class="w-[45%] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#380361] bg-[#E7E7E7]" />
 
                 <!-- Password Input Field -->
                 <!-- Accepts the user's password securely -->
-                <input type="password" placeholder="🔒 Password" required name="password"
+                <input type="password" placeholder="🔒 Password" required name="password" id="loginPassword"
                     class="w-[45%] pl-4 h-[45px] text-[#380361] rounded-full focus:outline-none focus:border focus:border-[#380361] placeholder:text-[#380361] bg-[#E7E7E7]" />
 
                 <!-- Remember Me Checkbox and Forgot Password Link -->
@@ -110,6 +119,8 @@
             <img src="../assets/login_side.png" alt="" class="h-full w-full object-fill">
         </div>
     </div>
+
+    <script src="./login.js"></script>
 </body>
 
 </html>
