@@ -14,6 +14,7 @@ async function loginUser() {
 
     if (matchedUser) {
       alert("Login successful");
+      
       localStorage.setItem("loggedInUser", JSON.stringify(matchedUser));
       window.location.href = "../../index.html";
     } else {
@@ -29,3 +30,6 @@ loginForm.addEventListener('submit', e => {
   e.preventDefault();
   loginUser();
 });
+
+console.log(login);
+

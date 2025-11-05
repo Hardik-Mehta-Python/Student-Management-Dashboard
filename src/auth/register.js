@@ -15,19 +15,40 @@ async function registerUser() {
     let response = await fetch("http://localhost:2000/user");
     let users = await response.json();
 
+    // ✅ Check username already exists
     let isTaken = users.some(user => user.username === registerUsername.value);
     if (isTaken) {
       alert("Username already taken");
       return;
     }
 
+    // ✅ Get all used IDs
+    let usedIDs = users.map(user => Number(user.id));
+
+    // ✅ Find smallest available ID between 1 - 999
+    let newIdNum = 1;
+    while (usedIDs.includes(newIdNum) && newIdNum <= 999) {
+      newIdNum++;
+    }
+
+    if (newIdNum > 999) {
+      alert("User limit reached (Max 999 users)");
+      return;
+    }
+
+    // ✅ Convert to 3-digit ID
+    let newId = String(newIdNum).padStart(3, '0');
+
+    // ✅ Create new user object with ID
     let newUser = {
+      id: newId,
       username: registerUsername.value,
       fullName: registerFullName.value,
       email: registerEmail.value,
       password: registerPassword.value
     };
 
+    // ✅ Save user
     let addUser = await fetch("http://localhost:2000/user", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -35,14 +56,13 @@ async function registerUser() {
     });
 
     if (addUser.ok) {
-      alert("Registered successfully");
+      alert(`Registered Successfully!`);
       registerForm.reset();
-      setTimeout(() => {
-        window.location.href = "./login.html";
-      }, 0);
+      window.location.href = "./login.html";
     } else {
       alert("Failed to register user");
     }
+
   } catch (error) {
     console.error("Registration error:", error);
     alert("Something went wrong.");
