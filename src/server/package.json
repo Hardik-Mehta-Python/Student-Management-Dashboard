@@ -5,9 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx json-server --watch user.json --port 2000"
+    "user": "json-server --watch user.json --port 2000",
+  "students": "json-server --watch students.json --port 4000",
+  "start:both": "concurrently \"npm run user\" \"npm run students\""
+    
+    
+    
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {}
 }

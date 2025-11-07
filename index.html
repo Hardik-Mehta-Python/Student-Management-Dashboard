@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         #courses {
             appearance: none;
@@ -40,6 +41,8 @@
                         class="group-[.active]:scale-x-100 h-0.5 w-full bg-[#380361] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center">
                     </div>
                 </li>
+
+                <!-- BEFORE LOGIN -->
                 <li id="authButtons" class="flex gap-4">
                     <a href="./src/auth/login.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">LOG
                         IN</a>
@@ -47,26 +50,27 @@
                         class="border px-6 py-2 rounded-full bg-[#380361] text-white">REGISTER</a>
                 </li>
 
+                <!-- AFTER LOGIN -->
                 <li id="userSection" class="hidden flex items-center gap-4">
-
                     <a href="./src/info.html" class="flex items-center gap-3 hover:opacity-80">
                         <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png"
                             class="w-10 h-10 rounded-full" />
                         <span id="usernameText" class="text-[#380361] font-medium"></span>
                     </a>
-
                     <button id="logoutBtn" class="px-6 py-2 rounded-full bg-[#380361] text-white">LOG OUT</button>
                 </li>
 
-
-                <!-- <li><a href="./src/auth/login.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">LOG IN</a></li>
-            <li><a href="./src/auth/register.html" class="border px-6 py-2 rounded-full bg-[#380361] text-white">REGISTER</a></li> -->
             </ul>
         </nav>
     </header>
 
-    <!-- ==================== SEARCH & FILTER SECTION ==================== -->
-    <section class="flex w-full justify-evenly items-center">
+    <!-- ✅ SHOW THIS BEFORE LOGIN -->
+    <h1 id="loginMessage" class="hidden text-center text-4xl font-bold text-[#380361] mt-20">
+        Please Login First To Continue
+    </h1>
+
+    <!-- ✅ SHOW THIS AFTER LOGIN -->
+    <section id="searchSection" class="hidden flex w-full justify-evenly items-center">
         <input type="text" placeholder="🔎︎ Search By Name and Id"
             class="placeholder:text-[#380361] focus:border-[#380361] focus:outline-none text-[#380361] w-[20%] border py-1.5 px-4 rounded-full border-[#380361]">
 
@@ -89,100 +93,21 @@
             </a>
         </div>
     </section>
-    <section class="mb-55"></section>
-    <!-- ==================== MAIN CONTENT SECTION ==================== -->
-    <!-- <div class="text-center mt-10 mb-6 flex flex-col w-[15%] m-auto">
-    <h1 class="text-3xl font-bold text-[#380361] uppercase tracking-wide">Student List</h1>
-    <div class="h-0.5 w-full bg-[#380361] mx-auto mt-1 rounded"></div>
-</div> -->
-    <!-- <header class="grid grid-cols-[0.5fr_0.5fr_1fr_1fr_2fr_2fr_2fr] ml-16">
-    <div>div-1</div>
-    <div>div-2</div>
-    <div>div-3</div>
-    <div>div-4</div>
-    <div>div-5</div>
-    <div>div-6</div>
-    <div>div-7</div>
-    <div>101</div>
-    <div>profile</div>
-    <div>Hardik mehta</div>
-    <div>+91 8160204826</div>
-    <div>hardikrajguru7507@gmail.com</div>
-    <div>Python Full Course</div>
-    <div>3 button 3 button</div>
-</header> -->
 
-    <!-- <section class="px-12 py-8">
-  <h2 class="text-2xl font-bold underline underline-offset-4 mb-8 text-center">STUDENT LIST</h2> -->
+<div class="w-full overflow-x-auto">
+  <section class="grid grid-cols-7 gap-6 font-semibold text-purple-900 border-b pb-3 min-w-[900px]">
+      <div>ID</div>
+      <div>Profile</div>
+      <div>Name</div>
+      <div>Phone No.</div>
+      <div>Email</div>
+      <div>Course</div>
+      <div>Actions</div>
+  </section>
+</div>
 
-    <!-- Table Header -->
-    <!-- <div class="grid grid-cols-6 font-bold text-lg mb-4">
-    <p>ID</p>
-    <p>Profile</p>
-    <p>Name</p>
-    <p>Phone No.</p>
-    <p>Email</p>
-    <p>Course</p>
-    <p class="ml-auto mr-8">Actions</p>
-  </div> -->
 
-    <!-- Table Rows -->
-    <!-- <div class="space-y-4"> -->
-    <!-- Row -->
-    <!-- <div class="grid grid-cols-6 items-center border-b border-gray-200 py-3">
-      <p>101</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" alt="Profile" class="w-10 h-10 rounded-full" />
-      <p>Dhrumil Patel</p>
-      <p>+91 9876543210</p>
-      <p>dhrumilpatel@gmail.com</p>
-      <p>Python Full Stack</p>
-      <div class="flex justify-end space-x-4 mr-4">
-        <button class="bg-[#310063] p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553 4.553M19.553 14.553A8 8 0 1110 4a8 8 0 019.553 10.553z" />
-          </svg>
-        </button>
-        <button class="bg-[#310063] p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M9 11l6-6 3 3L12 14l-3 1 1-3z" />
-          </svg>
-        </button>
-        <button class="bg-[#310063] p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-    </div> -->
 
-    <!-- Duplicate 4 More Rows -->
-    <!-- <div class="grid grid-cols-6 items-center border-b border-gray-200 py-3">
-      <p>101</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" alt="Profile" class="w-10 h-10 rounded-full" />
-      <p>Dhrumil Patel</p>
-      <p>+91 9876543210</p>
-      <p>dhrumilpatel@gmail.com</p>
-      <p>Python Full Stack</p>
-      <div class="flex justify-end space-x-4 mr-4">
-        <button class="bg-[#310063] p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553 4.553M19.553 14.553A8 8 0 1110 4a8 8 0 019.553 10.553z" />
-          </svg>
-        </button>
-        <button class="bg-[#310063] p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M9 11l6-6 3 3L12 14l-3 1 1-3z" />
-          </svg>
-        </button>
-        <button class="bg-[#310063] p-3 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</section> -->
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="p-10 w-full flex flex-col gap-4 bg-[#380361] text-white ">
@@ -202,7 +127,6 @@
 
             <!-- Footer Links -->
             <div class="flex justify-evenly w-[50%]">
-                <!-- Company Links -->
                 <div class="flex flex-col gap-4">
                     <h1 class="font-medium">Company</h1>
                     <ul class="flex flex-col gap-2">
@@ -214,8 +138,6 @@
                         <li><a href="">Career</a></li>
                     </ul>
                 </div>
-
-                <!-- Documentation Links -->
                 <div class="flex flex-col gap-4">
                     <h1 class="font-medium">Documentation</h1>
                     <ul class="flex flex-col gap-2">
@@ -225,8 +147,6 @@
                         <li><a href="">Privacy Policy</a></li>
                     </ul>
                 </div>
-
-                <!-- Social Links -->
                 <div class="flex flex-col gap-4">
                     <h1 class="font-medium">Social</h1>
                     <ul class="flex flex-col gap-2">
@@ -239,12 +159,10 @@
             </div>
         </div>
 
-        <!-- Divider -->
         <div>
             <div class="border border-[#ADACB8] mx-8"></div>
         </div>
 
-        <!-- Footer Bottom -->
         <div class="px-[28px] flex w-full justify-between">
             <p>&copy; Logo All Rights Reserved 2025</p>
             <p>Terms & Condition</p>
@@ -268,31 +186,10 @@
             </aside>
         </div>
     </footer>
+
+    <!-- ✅ SCRIPT LOCATIONS -->
     <script src="./src/auth/login.js"></script>
-    <script src="./src/smd.js"></script>
-
-    <!-- <script>
-        let user = JSON.parse(localStorage.getItem("loggedInUser"));
-
-        const authButtons = document.getElementById("authButtons");
-        const userSection = document.getElementById("userSection");
-        const usernameText = document.getElementById("usernameText");
-        const logoutBtn = document.getElementById("logoutBtn");
-
-        if (user) {
-            authButtons.classList.add("hidden");
-            userSection.classList.remove("hidden");
-            usernameText.textContent = user.username.slice(0, 8) + "...";
-        }
-
-        if (logoutBtn) {
-            logoutBtn.addEventListener("click", () => {
-                localStorage.removeItem("loggedInUser");
-                window.location.reload();
-            });
-        }
-    </script> -->
-
+    <script src="./index.js"></script>
 
 </body>
 
