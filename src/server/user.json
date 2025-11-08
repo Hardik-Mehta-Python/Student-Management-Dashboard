@@ -6,6 +6,20 @@
       "fullName": "Bhavin Savaliya",
       "email": "bhavinsavalaiya@gmail.com",
       "password": "15112004"
+    },
+    {
+      "id": "002",
+      "username": "madhav",
+      "fullName": "Jogi Madhav",
+      "email": "madhav@gmail.com",
+      "password": "70617091"
+    },
+    {
+      "id": "003",
+      "username": "hardik",
+      "fullName": "Hardik Mehta",
+      "email": "hardikrajguru7507@gmail.com",
+      "password": "8160204826"
     }
   ]
 }

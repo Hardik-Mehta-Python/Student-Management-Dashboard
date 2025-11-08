@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="font h-screen">
+<body class="">
     <!-- ==================== NAVIGATION BAR ==================== -->
     <header class="h-[72px] w-full flex justify-between mb-8 shadow">
         <aside class="w-[20%] h-full text-[40px] flex justify-start items-center p-4 text-[#380361] font-medium">
@@ -70,7 +70,7 @@
     </h1>
 
     <!-- ✅ SHOW THIS AFTER LOGIN -->
-    <section id="searchSection" class="hidden flex w-full justify-evenly items-center">
+    <section id="searchSection" class="hidden flex w-full justify-evenly items-center mb-20">
         <input type="text" placeholder="🔎︎ Search By Name and Id"
             class="placeholder:text-[#380361] focus:border-[#380361] focus:outline-none text-[#380361] w-[20%] border py-1.5 px-4 rounded-full border-[#380361]">
 
@@ -93,24 +93,55 @@
             </a>
         </div>
     </section>
+    <main id="studentList" class="hidden text-[#380361]">
 
-<div class="w-full overflow-x-auto">
-  <section class="grid grid-cols-7 gap-6 font-semibold text-purple-900 border-b pb-3 min-w-[900px]">
-      <div>ID</div>
-      <div>Profile</div>
-      <div>Name</div>
-      <div>Phone No.</div>
-      <div>Email</div>
-      <div>Course</div>
-      <div>Actions</div>
-  </section>
-</div>
+        <div class="text-center mt-10 mb-6 flex flex-col w-[15%] m-auto">
+            <h1 class="text-3xl font-bold text-[#380361] uppercase tracking-wide">Student List</h1>
+            <div class="h-0.5 w-full bg-[#380361] mx-auto mt-1 rounded"></div>
+        </div>
+
+        <div class="w-full overflow-x-auto px-15 py-3 border m-auto">
+            <section id="studentGrid"
+                class="grid grid-cols-[0.4fr_0.6fr_1fr_1fr_1.2fr_1fr_1fr] justify-self-center self-center gap-6 text-[#380361] items-center  pb-4 text-[20px] font-medium">
+
+                <div class="font-extrabold">ID</div>
+                <div class="font-extrabold">Profile</div>
+                <div class="font-extrabold">Name</div>
+                <div class="font-extrabold">Phone No.</div>
+                <div class="font-extrabold">Email</div>
+                <div class="font-extrabold">Course</div>
+                <div class="font-extrabold">Actions</div>
+
+                <!-- <div>101</div>
+                <div><img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png"
+                        class="w-10 h-10 rounded-full" /></div>
+                <div>Dhrumil Patel</div>
+                <div>+91 9876543210</div>
+                <div>dhrumilpatel@gmail.com</div>
+                <div>Python Full Stack</div>
+
+                <div class="flex justify-start items-center gap-2">
+                    <button  class="h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
+                        <a href="./src/profile.html"><i class="fa-solid fa-eye"></i></a>
+                    </button>
+                    <button  class="h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
+                        <a href="./src/update.html"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </button>
+                    <button class="h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
+                        <i class="fa-solid fa-trash"></i>
+                    </button> -->
+                </div>
+
+            </section>
+        </div>
+
+    </main>
 
 
 
 
     <!-- ==================== FOOTER ==================== -->
-    <footer class="p-10 w-full flex flex-col gap-4 bg-[#380361] text-white ">
+    <footer class="p-10 w-full flex flex-col gap-4 bg-[#380361] text-white  ">
         <div class="bg-[#380361] text-white flex w-full justify-between items-center mb-20">
             <!-- Newsletter -->
             <div class="flex flex-col gap-5 w-[30%] ml-10">
