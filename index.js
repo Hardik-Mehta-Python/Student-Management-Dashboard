@@ -102,20 +102,21 @@ function loadStudents() {
 
                     <div class="flex justify-start items-center gap-2">
 
-                        <button class="h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
-                            <a href="./src/profile.html?id=${student.id}">
-                                <i class="fa-solid fa-eye"></i>
-                            </a>
-                        </button>
+                        <a href="./src/profile.html?id=${student.id}" 
+                            class="h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
 
-                        <button class="h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
-                            <a href="./src/update.html?id=${student.id}">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </a>
-                        </button>
+                        <!-- Update Student -->
+                        <a href="./src/update.html?id=${student.id}" 
+                            class="h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
 
-                        <button data-id="${student.id}" class="deleteBtn h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
-                            <i class="fa-solid fa-trash"></i>
+                        <!-- Delete Student -->
+                        <button data-id="${student.id}" 
+                                class="deleteBtn h-10 w-10 rounded-full bg-[#380361] flex justify-center items-center text-white">
+                                <i class="fa-solid fa-trash"></i>
                         </button>
 
                     </div>
