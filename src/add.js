@@ -1,21 +1,4 @@
-// let name = document.getElementById("studentFullName").value;
-// let age = document.getElementById("studentAge").value;
-// let gender = document.getElementById("studentGender").value;
-// let dob = document.getElementById("studentDOB").value;
-// let phone = document.getElementById("studentPhone").value;
-// let course = document.getElementById("studentCourse").value;
-// let email = document.getElementById("studentEmail").value;
-// let address = document.getElementById("studentAddress").value;
-// let studentForm = document.getElementById('studentForm')
-// let profileFile = document.getElementById("studentPicture").files[0];
-// let reader = new FileReader();
-// reader.readAsDataURL(profileFile);
 
-// async function addStudent() {
-//     let newStudnet = {
-
-//     }
-// }
 
 document.getElementById("studentForm").addEventListener("submit", function (e) {
     e.preventDefault();
