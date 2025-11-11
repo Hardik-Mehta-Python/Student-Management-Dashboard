@@ -25,7 +25,7 @@ if (user) {
   loginMessage.classList.add("hidden");
   studentList.classList.remove("hidden");
 
-  usernameText.textContent = user.username.slice(0, 8) + "...";
+  usernameText.textContent = user.username;
 } else {
   authButtons.classList.remove("hidden");
   userSection.classList.add("hidden");

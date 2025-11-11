@@ -56,9 +56,14 @@ async function registerUser() {
     });
 
     if (addUser.ok) {
-      alert(`Registered Successfully!`);
+      // alert(`Registered Successfully!`);
       registerForm.reset();
-      window.location.href = "./login.html";
+      console.log("done");
+      // setTimeout(() => {
+        window.location.href = "./login.html";
+      // }, 100);
+
+
     } else {
       alert("Failed to register user");
     }

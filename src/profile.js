@@ -1,64 +1,64 @@
 // ----------------- GET STUDENT ID FROM URL -----------------
-let params = new URLSearchParams(window.location.search);
-let studentId = params.get("id");
-
-// if (!studentId) {
-//     alert("Invalid Request: Student ID Missing!");
-//     window.location.href = "../index.html";
-// }
+const params = new URLSearchParams(window.location.search);
+const studentId = params.get("id");
 
 // ----------------- SELECT ELEMENTS -----------------
-let profileImage = document.querySelector("img[alt='avatar']");
-let studentName = document.querySelector(".text-xl.font-bold.text-white.mb-4.mt-2");
+const profileImage = document.getElementById("profileImage");
+const studentName = document.getElementById("studentName");
 
-let idInput = document.getElementById("userID");
-let dobInput = document.querySelectorAll("input")[1];
-let ageInput = document.querySelectorAll("input")[2];
-let genderInput = document.querySelectorAll("input")[3];
+const idInput = document.getElementById("userID");
+const dobInput = document.getElementById("dob");
+const ageInput = document.getElementById("age");
+const genderInput = document.getElementById("gender");
+const phoneInput = document.getElementById("phone");
+const emailInput = document.getElementById("email");
+const courseInput = document.getElementById("course");
 
-let phoneInput = document.querySelectorAll("input")[4];
-let emailInput = document.querySelectorAll("input")[5];
-let courseInput = document.querySelectorAll("input")[6];
+const deleteConfirmBtn = document.getElementById("deleteConfirmBtn");
 
-let deleteConfirmBtn = document.querySelector("#modal button.bg-red-600");
+const url = `http://localhost:4000/students/${studentId}`;
 
 // ----------------- FETCH STUDENT DATA -----------------
-let url = `http://localhost:4000/students/${studentId}`;
+async function fetchStudentData() {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
 
-fetch(url)
-    .then(function (res) {
-        return res.json();
-    })
-    .then(function (student) {
+    const student = await res.json();
 
-        // ✅ Fill all UI fields
-        studentName.textContent = student.fullName;
-        profileImage.src = student.profileImage;
+    // ✅ Fill UI
+    studentName.textContent = student.fullName;
+    profileImage.src = student.profileImage || "https://cdn-icons-png.flaticon.com/512/4140/4140048.png";
 
-        idInput.value = student.id;
-        dobInput.value = student.dob;
-        ageInput.value = student.age;
-        genderInput.value = student.gender;
+    idInput.value = student.id;
+    dobInput.value = student.dob;
+    ageInput.value = student.age;
+    genderInput.value = student.gender;
+    phoneInput.value = student.phone;
+    emailInput.value = student.email;
+    courseInput.value = student.course;
 
-        phoneInput.value = student.phone;
-        emailInput.value = student.email;
-        courseInput.value = student.course;
+  } catch (err) {
+    console.error("Error fetching student:", err);
+    alert("❌ Failed to load student data.");
+  }
+}
 
-    })
-    .catch(function (err) {
-        console.error("Error fetching student:", err);
-    });
+fetchStudentData();
 
 // ----------------- DELETE STUDENT -----------------
-deleteConfirmBtn.addEventListener("click", function () {
+deleteConfirmBtn.addEventListener("click", async () => {
+  try {
+    const res = await fetch(url, { method: "DELETE" });
+    if (!res.ok) throw new Error(`Delete failed: ${res.status}`);
 
-    fetch(url, { method: "DELETE" })
-        .then(function () {
-            alert("✅ Student Successfully Deleted!");
-            window.location.href = "../index.html";
-        })
-        .catch(function (err) {
-            console.error("Delete Failed:", err);
-        });
-
+    alert("✅ Student Successfully Deleted!");
+    window.location.href = "../index.html";
+  } catch (err) {
+    console.error("Delete Failed:", err);
+    alert("❌ Unable to delete student. Please try again.");
+  }
 });
+
+document.getElementById("updateLink").href = `./update.html?id=${studentId}`;
+
